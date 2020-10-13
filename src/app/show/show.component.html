@@ -1,0 +1,9 @@
+
+<ng-content></ng-content>
+
+
+<div class="container d-flex justify-content-between alert alert-primary" role="alert">
+    <small class="mr-2 text-muted">{{student.id}}</small>
+    <p class="mt-2 ">{{student.name}}</p>
+    <button class="btn btn-danger" (click)='ondelete(student.id)'>Delete</button>
+  </div>

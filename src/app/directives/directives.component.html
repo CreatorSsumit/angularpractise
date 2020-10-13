@@ -1,0 +1,17 @@
+<ul *ngIf="select">
+    <li [ngClass]="{odd: select ? 'true' : 'false'}" *ngFor="let odds of oddata">{{odds}}</li>
+</ul>
+<ul *ngIf="!select">
+    <li  [ngStyle]="{backgroundColor: !select ? 'green' :'red'}" *ngFor="let even of evendata;let i=index">{{even}}-{{i}}</li>
+</ul>
+<p appStyle [primaryColor]="'red'" [SecondaryColor]= "'yellow'">attribute directive</p>
+
+<div [ngSwitch]="value">
+    <div *ngSwitchCase="1">1</div>
+    <div *ngSwitchCase="2">2</div>
+    <div *ngSwitchCase="3">3</div>
+    <div *ngSwitchCase="4">4</div>
+    <div *ngSwitchDefault>output2</div>
+</div>
+
+<button (click)='change()'>click</button>

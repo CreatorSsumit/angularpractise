@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'practise';
+  usernamelist: Array<string> = [];
+  username:string;
+  click(h):void{
+    this.usernamelist.push(h)
+    this.username = ''
+  };
+  write(event):void{
+    this.title = event.target.value
+  }
+  
 }

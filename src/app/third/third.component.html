@@ -1,0 +1,20 @@
+<form class="form-inline jumbotron jumbotron-fluid p-5">
+    <div class="form-group mb-2">
+      <label for="staticEmail2" class="sr-only">Id</label>
+      <input type="text" class="p-2 form-control" id="staticEmail2" placeholder="Student id" #sid />
+    </div>
+    <div class="form-group mx-sm-3 mb-2">
+      <label for="inputPassword2" class="sr-only">Name</label>
+      <input type="text" class="form-control" id="inputPassword2" placeholder="Student name" #sname />
+    </div>
+    <button type="submit" (click)="onsubmit()" class="btn btn-primary mb-2">Register Student</button> &nbsp;
+    <button type="reset" class="btn btn-warning mb-2">Reset</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, quibusdam.</p>
+  </form>
+<app-show (deletedata)='ondelete($event)' *ngFor="let item of student" [studentdetails]='item'>
+
+    <!-- <p #showdata>hello from Bhopal</p> -->
+
+</app-show>
+<!-- <app-directives></app-directives>
+ -->
